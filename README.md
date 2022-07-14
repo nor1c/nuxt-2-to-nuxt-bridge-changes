@@ -8,7 +8,6 @@
 - `@changed`: `useContext()` -> `useNuxtApp()`
 <br>*<b>note:</b>* any keys that previously exists in `useContext()` is now moved into `useNuxtApp().nuxt2Context`, so you can't directly use it from `useNuxtApp()`
 - `@changes`: route (previously in `useContext()`) is no longer in ref, so you should directly use the value of it, for example:
-<br><br>
   - before: `const currentRoute = route.value.name`
   - is now: `const currentRoute = route.name`
 
