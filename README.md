@@ -16,3 +16,6 @@
 - `$config` & `this.$config` is now separated into 2 types, `app` and `public` (which configured in `nuxt.config.ts -> publicRuntimeConfig`)
 <br><b>so,</b> if you want to use any configs that defined in `publicRuntimeConfig` you should use `$config.public`
 - Don't know why but seems like you don't need to re-import composable file in every files that need it, for example if you have already imported a composable file in `/layouts/Layout.vue`, then you don't need to re-import it when you want to use it in the child component
+- Template refs is not working, you should add more key when to use it, for example
+  - before: `someElementRef.value.callTheFunction()`
+  - after: `someElementRef.value._setupState.callTheFunction()`
